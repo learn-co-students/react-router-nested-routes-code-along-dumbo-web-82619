@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 import {
   BrowserRouter as Router,
   Route
-} from 'react-router-dom';
-import NavBar from '../components/NavBar';
-import MoviesPage from './MoviesPage';
+} from 'react-router-dom'
+import NavBar from '../components/NavBar'
+import MoviesPage from './MoviesPage'
 
 class App extends Component {
 
@@ -20,13 +20,13 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <NavBar />
-          <Route exact path="/" render={() => <div>Home</div>} />
-          <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
+          <NavBar/>
+          <Route exact path="/" render={() => <div>Home</div>}/>
+          <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>}/>
         </div>
       </Router>
-    );
+    )
   }
 }
 
-export default App;
+export default App
